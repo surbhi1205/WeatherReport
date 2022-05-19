@@ -1,0 +1,127 @@
+<div class="container my-5">
+  <div class="row box-shadow-content ">
+    <div class="col-12 col-md-12 mb-3">
+      <div class=" p-5">
+        <h3 class="text-center my-4">Locationwise Weather Report</h3>
+        <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToWeathAPI(weatherSearchForm.value)">
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="location" id="Weather Location"
+              placeholder="Provide a location">
+          </div>
+          <div class="text-center mb-3">
+            <button type="submit" class="btn btn-primary btn-md">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row box-shadow-content mt-3">
+
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-md-offset-3">
+          <div class=" p-3">
+            <h3 class="text-center my-4">Weather ForeCast </h3>
+            <hr>
+            <table width="300" border="1" align="center" cellPadding="0">
+              <thead>
+                <tr>
+                  <th class="h6">Variable</th>
+                  <th class="h6">Value</th>    
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>
+                  Location
+                  </td>
+                  <td> {{this.weatherData?.name}}
+                  </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Current weather conditions 
+                </td>
+                <td>
+                  {{ this.weatherData?.main.temp}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Feels like 
+                </td>
+                <td>
+                  {{ this.weatherData?.main.feels_like }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Minium Temperature  
+                </td>
+                <td>
+                  {{ this.weatherData?.main.temp_min }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Maximum Temperature  
+                </td>
+                <td>
+                  {{ this.weatherData?.main.temp_max}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Atmospheric pressure  
+                </td>
+                <td>
+                  {{ this.weatherData?.main.pressure }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Atmospheric Humidity 
+                </td>
+                <td>
+                  {{ this.weatherData?.main.humidity }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Wind Speed
+                </td>
+                <td>
+                  {{ this.weatherData?.wind.speed }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Visibility  
+                </td>
+                <td>
+                  {{ this.weatherData?.visibility }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Clouds Visibility  
+                </td>
+                <td>
+                  {{ this.weatherData?.clouds.all }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Humidity
+                </td>
+                <td>
+                  {{ this.weatherData?.main.humidity }}
+                </td>
+              </tr>
+            </tbody>
+          </table> 
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+  </div>
+</div>

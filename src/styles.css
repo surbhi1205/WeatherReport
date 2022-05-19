@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+  table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    height: 50px;
+    vertical-align: bottom;
+  }
+
+  .box-shadow-content {
+    background: #fff;
+    box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+}
+
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid grey;
+}
+th, td {
+    padding: 20px;
+    background-color:none;
+}
